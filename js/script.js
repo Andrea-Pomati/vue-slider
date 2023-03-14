@@ -33,7 +33,22 @@ createApp({
   },
 
   methods: { 
-
+     // button Next:
+     nextImage(){
+        // aumento:
+        this.activeImage++;
+        if(this.activeImage > this.slides.length - 1){
+            this.activeImage = 0
+        }
+    },
+    // bottone Prev:
+    prevImage(){
+        // diminuisco:
+        this.activeImage--;
+        if(this.activeImage < 0){
+            this.activeImage = this.slides.length - 1;
+        }
+    }
 
   }
 }).mount('#app')
